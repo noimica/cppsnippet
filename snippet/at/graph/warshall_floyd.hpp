@@ -1,18 +1,25 @@
 #pragma region warshall_floyd
 // O(|V|^3)
-vector<vector<ll>> warshall_floyd(const vector<vector<ll>> &_dist){
+pair<bool, vector<vector<ll>>> warshall_floyd(const vector<vector<ll>> &_dist){
     int V = _dist.size();
     vector<vector<ll>> dist(_dist);
     REP(k, V) {
         REP(i, V) {
             REP(j, V) {
+                if(dist[i][k] == INF || dist[k][j] == INF) continue;
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]);
             }
         }
     }
-    return dist;
+    bool is_negative_cycle = false;
+    REP(i, V){
+        if(dist[i][i] < 0){
+            is_negative_cycle = true;break;
+        }
+    }
+    return {is_negative_cycle, dist};
 }
-vector<vector<ll>> warshall_floyd(const graph& g) {
+pair<bool, vector<vector<ll>>> warshall_floyd(const graph& g) {
     int V = g.V;
     vector<vector<ll>> dist(V, vector<ll>(V, INF));
     REP(i, V){

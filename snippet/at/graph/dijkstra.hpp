@@ -1,7 +1,8 @@
 // O(|E|log|V|)
-vector<ll> dijkstra(const graph& g, ll s){
+umap<ll, ll> dijkstra(const graph& g, ll s){
     vector<ll> d(g.V, INF);
-    d[s] = 0;
+    umap<ll, ll> ret;
+    ret[s] = d[s] = 0;
     priority_queue<P,vector<P>, greater<P>> que;
     que.push({0, s});
     while(!que.empty()){
@@ -9,10 +10,10 @@ vector<ll> dijkstra(const graph& g, ll s){
         if(d[v]<c) continue;
         for(auto e : g.G[v]){
             if(d[e.to]>d[v]+e.cost){
-                d[e.to] = d[v]+e.cost;
+                ret[e.to] = d[e.to] = d[v]+e.cost;
                 que.push({d[e.to],e.to});
             }
         }
     }
-    return d;
+    return ret;
 }

@@ -1,14 +1,15 @@
 #pragma region bellman_ford
 // O(|E||V|)
-pair<bool, vector<ll>> bellman_ford(int V, const vector<edge> &edges, int s){
+pair<bool, umap<ll, ll>> bellman_ford(int V, const vector<edge> &edges, int s){
     vector<ll> dist(V, INF);
-    dist[s] = 0;
+    umap<ll, ll> ret;
+    ret[s] = dist[s] = 0;
     bool is_negative_cycle = true;
     REP(cnt, V){
         bool end = true;
         for (auto e : edges) {
             if (dist[e.from] != INF && dist[e.from] + e.cost < dist[e.to]) {
-                dist[e.to] = dist[e.from] + e.cost;
+                ret[e.to] = dist[e.to] = dist[e.from] + e.cost;
                 end = false;
             }
         }
@@ -18,9 +19,9 @@ pair<bool, vector<ll>> bellman_ford(int V, const vector<edge> &edges, int s){
             break;
         }
     }
-    return {is_negative_cycle, dist};
+    return {is_negative_cycle, ret};
 }
-pair<bool, vector<ll>> bellman_ford(const graph& g, int s) {
+pair<bool, umap<ll, ll>> bellman_ford(const graph& g, int s) {
     int V = g.V;
     vector<edge> edges;
     REP(i, V){
