@@ -3,7 +3,7 @@
 
 #include "./snippet/at/header/header.hpp"
 #include "./snippet/at/graph/graph.hpp"
-#include "./snippet/at/graph/Tsort.hpp"
+#include "./snippet/at/graph/tSort.hpp"
 
 int main(){
     I(ll, V, E);
@@ -13,7 +13,7 @@ int main(){
         g.add_diedge(s, t);
     }
 
-    auto vs = Tsort(g);
+    auto vs = tSort(g);
     REP(i, V){
         cout << vs[i] << el;
     }

@@ -2,7 +2,7 @@
 
 #include "./snippet/at/header/header.hpp"
 #include "./snippet/at/graph/graph.hpp"
-#include "./snippet/at/graph/warshall_floyd.hpp"
+#include "./snippet/at/graph/warshallFloyd.hpp"
 
 int main(){
     I(ll, V, E);
@@ -12,7 +12,7 @@ int main(){
         g.add_diedge(s, t, d);
     }
 
-    auto [nc, d] = warshall_floyd(g);
+    auto [nc, d] = warshallFloyd(g);
     if(nc){
         cout << "NEGATIVE CYCLE" << el;
         return 0;
