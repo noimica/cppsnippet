@@ -42,19 +42,19 @@ data:
     - icon: ':warning:'
       path: snippet/at/graph/TSP.hpp
       title: snippet/at/graph/TSP.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: snippet/at/graph/Tsort.hpp
       title: snippet/at/graph/Tsort.hpp
     - icon: ':warning:'
-      path: snippet/at/graph/bellman_ford.hpp
-      title: snippet/at/graph/bellman_ford.hpp
+      path: snippet/at/graph/bellmanFord.hpp
+      title: snippet/at/graph/bellmanFord.hpp
     - icon: ':warning:'
       path: snippet/at/graph/bfs.hpp
       title: snippet/at/graph/bfs.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/dijkstra.hpp
       title: snippet/at/graph/dijkstra.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/graph.hpp
       title: snippet/at/graph/graph.hpp
     - icon: ':heavy_check_mark:'
@@ -70,11 +70,11 @@ data:
       path: snippet/at/graph/prim.hpp
       title: snippet/at/graph/prim.hpp
     - icon: ':warning:'
-      path: snippet/at/graph/tree_diamiter.hpp
-      title: snippet/at/graph/tree_diamiter.hpp
+      path: snippet/at/graph/treeDiamiter.hpp
+      title: snippet/at/graph/treeDiamiter.hpp
     - icon: ':heavy_check_mark:'
-      path: snippet/at/graph/warshall_floyd.hpp
-      title: snippet/at/graph/warshall_floyd.hpp
+      path: snippet/at/graph/warshallFloyd.hpp
+      title: snippet/at/graph/warshallFloyd.hpp
   - name: snippet/at/header
     pages:
     - icon: ':warning:'
@@ -83,7 +83,7 @@ data:
     - icon: ':warning:'
       path: snippet/at/header/cpp_int.hpp
       title: snippet/at/header/cpp_int.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/header/header.hpp
       title: snippet/at/header/header.hpp
     - icon: ':warning:'
@@ -98,14 +98,14 @@ data:
       path: snippet/at/math/combn.hpp
       title: snippet/at/math/combn.hpp
     - icon: ':warning:'
+      path: snippet/at/math/dpow.hpp
+      title: snippet/at/math/dpow.hpp
+    - icon: ':warning:'
       path: snippet/at/math/enumDivisors.hpp
       title: snippet/at/math/enumDivisors.hpp
     - icon: ':warning:'
       path: snippet/at/math/fact.hpp
       title: snippet/at/math/fact.hpp
-    - icon: ':warning:'
-      path: snippet/at/math/pow.hpp
-      title: snippet/at/math/pow.hpp
   - name: snippet/at/math/prime
     pages:
     - icon: ':warning:'
@@ -185,8 +185,8 @@ data:
       path: test/graph/prim.test.cpp
       title: test/graph/prim.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/graph/warshall_floyd.test.cpp
-      title: test/graph/warshall_floyd.test.cpp
+      path: test/graph/warshallFloyd.test.cpp
+      title: test/graph/warshallFloyd.test.cpp
   - name: test/struct/LazySegmentTree
     pages:
     - icon: ':heavy_check_mark:'

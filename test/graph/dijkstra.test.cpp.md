@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: snippet/at/graph/dijkstra.hpp
     title: snippet/at/graph/dijkstra.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/graph/graph.hpp
     title: snippet/at/graph/graph.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/header/header.hpp
     title: snippet/at/header/header.hpp
   _extendedRequiredBy: []

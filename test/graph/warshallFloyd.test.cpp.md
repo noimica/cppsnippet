@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/graph/graph.hpp
     title: snippet/at/graph/graph.hpp
   - icon: ':heavy_check_mark:'
-    path: snippet/at/graph/warshall_floyd.hpp
-    title: snippet/at/graph/warshall_floyd.hpp
-  - icon: ':question:'
+    path: snippet/at/graph/warshallFloyd.hpp
+    title: snippet/at/graph/warshallFloyd.hpp
+  - icon: ':heavy_check_mark:'
     path: snippet/at/header/header.hpp
     title: snippet/at/header/header.hpp
   _extendedRequiredBy: []
@@ -20,7 +20,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
-  bundledCode: "#line 1 \"test/graph/warshall_floyd.test.cpp\"\n#define PROBLEM \"\
+  bundledCode: "#line 1 \"test/graph/warshallFloyd.test.cpp\"\n#define PROBLEM \"\
     https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\r\n\r\n#line\
     \ 1 \"snippet/at/header/header.hpp\"\n#pragma region Macros\r\n#include <bits/stdc++.h>\r\
     \n#if defined(LOCAL) || defined(ONLINE_JUDGE) || defined(_DEBUG)\r\n#include <atcoder/all>\r\
@@ -58,8 +58,8 @@ data:
     \ [height, width](ll y, ll x){\r\n            return \r\n                (y <\
     \ 0 || y >= height || x < 0 || x >= width)\r\n                ? -1\r\n       \
     \         : y*width + x;\r\n        };\r\n    }\r\n};\r\n#pragma endregion\n#line\
-    \ 1 \"snippet/at/graph/warshall_floyd.hpp\"\n#pragma region warshall_floyd\r\n\
-    // O(|V|^3)\r\npair<bool, vector<vector<ll>>> warshall_floyd(const vector<vector<ll>>\
+    \ 1 \"snippet/at/graph/warshallFloyd.hpp\"\n#pragma region warshallFloyd\r\n//\
+    \ O(|V|^3)\r\npair<bool, vector<vector<ll>>> warshallFloyd(const vector<vector<ll>>\
     \ &_dist){\r\n    int V = _dist.size();\r\n    vector<vector<ll>> dist(_dist);\r\
     \n    REP(k, V) {\r\n        REP(i, V) {\r\n            REP(j, V) {\r\n      \
     \          if(dist[i][k] == INF || dist[k][j] == INF) continue;\r\n          \
@@ -67,13 +67,13 @@ data:
     \n        }\r\n    }\r\n    bool is_negative_cycle = false;\r\n    REP(i, V){\r\
     \n        if(dist[i][i] < 0){\r\n            is_negative_cycle = true;break;\r\
     \n        }\r\n    }\r\n    return {is_negative_cycle, dist};\r\n}\r\npair<bool,\
-    \ vector<vector<ll>>> warshall_floyd(const graph& g) {\r\n    int V = g.V;\r\n\
+    \ vector<vector<ll>>> warshallFloyd(const graph& g) {\r\n    int V = g.V;\r\n\
     \    vector<vector<ll>> dist(V, vector<ll>(V, INF));\r\n    REP(i, V){\r\n   \
     \     dist[i][i] = 0;\r\n        for(auto e : g.G[i]){\r\n            dist[i][e.to]\
-    \ = e.cost;\r\n        }\r\n    }\r\n    return warshall_floyd(dist);\r\n}\r\n\
-    #pragma endregion\n#line 6 \"test/graph/warshall_floyd.test.cpp\"\n\r\nint main(){\r\
+    \ = e.cost;\r\n        }\r\n    }\r\n    return warshallFloyd(dist);\r\n}\r\n\
+    #pragma endregion\n#line 6 \"test/graph/warshallFloyd.test.cpp\"\n\r\nint main(){\r\
     \n    I(ll, V, E);\r\n    graph g(V);\r\n    REP(i, E){\r\n        I(ll, s, t,\
-    \ d);\r\n        g.add_diedge(s, t, d);\r\n    }\r\n\r\n    auto [nc, d] = warshall_floyd(g);\r\
+    \ d);\r\n        g.add_diedge(s, t, d);\r\n    }\r\n\r\n    auto [nc, d] = warshallFloyd(g);\r\
     \n    if(nc){\r\n        cout << \"NEGATIVE CYCLE\" << el;\r\n        return 0;\r\
     \n    }\r\n    REP(i, V){\r\n        REP(j, V){\r\n            if(j > 0){\r\n\
     \                cout << \" \";\r\n            }\r\n            if(d[i][j] !=\
@@ -82,9 +82,9 @@ data:
     \n    }\r\n    return 0;\r\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\
     \r\n\r\n#include \"./snippet/at/header/header.hpp\"\r\n#include \"./snippet/at/graph/graph.hpp\"\
-    \r\n#include \"./snippet/at/graph/warshall_floyd.hpp\"\r\n\r\nint main(){\r\n\
-    \    I(ll, V, E);\r\n    graph g(V);\r\n    REP(i, E){\r\n        I(ll, s, t,\
-    \ d);\r\n        g.add_diedge(s, t, d);\r\n    }\r\n\r\n    auto [nc, d] = warshall_floyd(g);\r\
+    \r\n#include \"./snippet/at/graph/warshallFloyd.hpp\"\r\n\r\nint main(){\r\n \
+    \   I(ll, V, E);\r\n    graph g(V);\r\n    REP(i, E){\r\n        I(ll, s, t, d);\r\
+    \n        g.add_diedge(s, t, d);\r\n    }\r\n\r\n    auto [nc, d] = warshallFloyd(g);\r\
     \n    if(nc){\r\n        cout << \"NEGATIVE CYCLE\" << el;\r\n        return 0;\r\
     \n    }\r\n    REP(i, V){\r\n        REP(j, V){\r\n            if(j > 0){\r\n\
     \                cout << \" \";\r\n            }\r\n            if(d[i][j] !=\
@@ -94,17 +94,17 @@ data:
   dependsOn:
   - snippet/at/header/header.hpp
   - snippet/at/graph/graph.hpp
-  - snippet/at/graph/warshall_floyd.hpp
+  - snippet/at/graph/warshallFloyd.hpp
   isVerificationFile: true
-  path: test/graph/warshall_floyd.test.cpp
+  path: test/graph/warshallFloyd.test.cpp
   requiredBy: []
-  timestamp: '2021-06-18 19:34:09+09:00'
+  timestamp: '2021-06-18 20:23:15+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/graph/warshall_floyd.test.cpp
+documentation_of: test/graph/warshallFloyd.test.cpp
 layout: document
 redirect_from:
-- /verify/test/graph/warshall_floyd.test.cpp
-- /verify/test/graph/warshall_floyd.test.cpp.html
-title: test/graph/warshall_floyd.test.cpp
+- /verify/test/graph/warshallFloyd.test.cpp
+- /verify/test/graph/warshallFloyd.test.cpp.html
+title: test/graph/warshallFloyd.test.cpp
 ---

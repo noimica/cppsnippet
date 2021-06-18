@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/header/header.hpp
     title: snippet/at/header/header.hpp
   - icon: ':heavy_check_mark:'

@@ -3,9 +3,6 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/graph/Tsort.test.cpp
-    title: test/graph/Tsort.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/graph/dijkstra.test.cpp
     title: test/graph/dijkstra.test.cpp
@@ -16,11 +13,11 @@ data:
     path: test/graph/prim.test.cpp
     title: test/graph/prim.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/graph/warshall_floyd.test.cpp
-    title: test/graph/warshall_floyd.test.cpp
-  _isVerificationFailed: true
+    path: test/graph/warshallFloyd.test.cpp
+    title: test/graph/warshallFloyd.test.cpp
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/graph/graph.hpp\"\n#pragma region graph\r\nstruct\
@@ -56,12 +53,11 @@ data:
   path: snippet/at/graph/graph.hpp
   requiredBy: []
   timestamp: '2021-06-18 15:56:11+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/graph/dijkstra.test.cpp
   - test/graph/prim.test.cpp
-  - test/graph/Tsort.test.cpp
-  - test/graph/warshall_floyd.test.cpp
+  - test/graph/warshallFloyd.test.cpp
   - test/graph/kruskal.test.cpp
 documentation_of: snippet/at/graph/graph.hpp
 layout: document

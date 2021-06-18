@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/graph/graph.hpp
     title: snippet/at/graph/graph.hpp
   - icon: ':heavy_check_mark:'
     path: snippet/at/graph/kruskal.hpp
     title: snippet/at/graph/kruskal.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: snippet/at/header/header.hpp
     title: snippet/at/header/header.hpp
   - icon: ':heavy_check_mark:'
