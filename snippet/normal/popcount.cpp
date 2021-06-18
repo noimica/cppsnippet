@@ -1,1 +1,1 @@
-__builtin_popcount($1)
+__builtin_popcountll($1)

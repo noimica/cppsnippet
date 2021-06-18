@@ -77,4 +77,35 @@ struct LazySegmentTree {
         return query(k, k + 1);
     }
 };
+namespace lazysegtreeOpt{
+    using Monoid = ll;
+    using OpMonoid = ll;
+    namespace secadd{
+        // 要素と作用素のマージ
+        Monoid mapping(Monoid a, OpMonoid b) { return a + b; };
+        // 作用素と作用素のマージ
+        OpMonoid composition(OpMonoid a, OpMonoid b) { return a + b; };
+    };
+    namespace seccng{
+        OpMonoid ID = INF;    //単位元 ※要変更
+        // 要素と作用素のマージ
+        Monoid mapping(Monoid a, OpMonoid b) { return (b==ID)?a:b; };
+        // 作用素と作用素のマージ
+        OpMonoid composition(OpMonoid a, OpMonoid b) { return (b==ID)?a:b; };
+    }
+    namespace secmin{
+        const Monoid M = INF;    //単位元
+        // 演算
+        Monoid op(Monoid a, Monoid b){ return std::min(a, b); }
+        // 作用素マージの前にかませる関数
+        OpMonoid p(OpMonoid a, size_t n){ return a; }
+    };
+    namespace secsum{
+        const Monoid M = 0;    //単位元
+        // 演算
+        Monoid op(Monoid a, Monoid b){ return a+b; }
+        // 作用素マージの前にかませる関数
+        OpMonoid p(OpMonoid a, size_t n){ return a*n; }
+    };
+};
 #pragma endregion

@@ -21,9 +21,16 @@ struct graph{
     }
     // 有向グラフ
     void add_diedge(ll s, ll t, ll cost = 1){
-        edge e;
-        e.from = s, e.to = t, e.cost = cost;
-        G[s].push_back(e);
+        if(s < 0 || t < 0 || s >= V || t >= V) return;
+        G[s].push_back({s, t, cost});
+    }
+    auto pos2d(ll height, ll width){
+        return [height, width](ll y, ll x){
+            return 
+                (y < 0 || y >= height || x < 0 || x >= width)
+                ? -1
+                : y*width + x;
+        };
     }
 };
 #pragma endregion

@@ -14,8 +14,11 @@ template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } retu
 template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
 template<class T>using vec = vector<T>;
 template<class T, class U>using umap = unordered_map<T, U>;
+template<class T>using uset = unordered_set<T>;
 using ll = long long;
+using ld = long double;
 using P = pair<ll, ll>;
+using T = tuple<ll, ll, ll>;
 using vl = vec<ll>;
 #define fi first
 #define se second
@@ -33,5 +36,5 @@ int main(){
 }
 
 void Main(){
-    $1
+
 }
