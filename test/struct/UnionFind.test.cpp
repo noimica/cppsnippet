@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
 
-#include "./snippet/at/header/header.cpp"
-#include "./snippet/at/struct/UnionFind.cpp"
+#include "./snippet/at/header/header.hpp"
+#include "./snippet/at/struct/UnionFind.hpp"
 
 int main(){
     I(ll, N, Q);
