@@ -1,5 +1,5 @@
 //木の直径を求める
-ll tree_diamiter(const graph& g){
+ll treeDiamiter(const graph& g){
     auto u=bfs(g, 0);
     ll mx=0;
     EACH(x, u){

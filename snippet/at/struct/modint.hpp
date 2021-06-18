@@ -1,3 +1,4 @@
+// mod Pのための型
 #pragma region modint
 template<ll m> struct modint{
 protected:

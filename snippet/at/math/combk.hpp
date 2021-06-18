@@ -3,9 +3,9 @@
 // 前処理 O(k)
 // クエリ O(k)
 template <class MINT>
-struct combination {
+struct comb {
     vector<MINT> fact, ifact;
-    combination(int k):fact(k+1),ifact(k+1) {
+    comb(int k):fact(k+1),ifact(k+1) {
         fact[0] = 1;
         for (int i = 1; i <= k; ++i) fact[i] = fact[i-1]*i;
         ifact[k] = fact[k].inv();

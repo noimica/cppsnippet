@@ -1,5 +1,5 @@
 // トポロジカルソート O(V+E)
-vl Tsort(const graph &g) {  // bfs
+vl tSort(const graph &g) {  // bfs
     vl ans;
     int n = (int)g.V;
     vl ind(n);            // ind[i]: 頂点iに入る辺の数(次数)

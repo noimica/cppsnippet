@@ -1,3 +1,4 @@
+// 遅延セグメント木
 #pragma region LazySegmentTree
 // https://ei1333.github.io/algorithm/segment-tree.html
 // [l, r)

@@ -1,6 +1,6 @@
-#pragma region bellman_ford
+#pragma region bellmanFord
 // O(|E||V|)
-pair<bool, umap<ll, ll>> bellman_ford(int V, const vector<edge> &edges, int s){
+pair<bool, umap<ll, ll>> bellmanFord(int V, const vector<edge> &edges, int s){
     vector<ll> dist(V, INF);
     umap<ll, ll> ret;
     ret[s] = dist[s] = 0;
@@ -21,7 +21,7 @@ pair<bool, umap<ll, ll>> bellman_ford(int V, const vector<edge> &edges, int s){
     }
     return {is_negative_cycle, ret};
 }
-pair<bool, umap<ll, ll>> bellman_ford(const graph& g, int s) {
+pair<bool, umap<ll, ll>> bellmanFord(const graph& g, int s) {
     int V = g.V;
     vector<edge> edges;
     REP(i, V){
@@ -29,6 +29,6 @@ pair<bool, umap<ll, ll>> bellman_ford(const graph& g, int s) {
             edges.emplace_back(e);
         }
     }
-    return bellman_ford(V, edges, s);
+    return bellmanFord(V, edges, s);
 }
 #pragma endregion
