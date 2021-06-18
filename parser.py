@@ -3,7 +3,8 @@ import glob
 import json
 import sys
 
-EXTENSIONS = {'.cpp', '.hpp'}
+# EXTENSIONS = {'.cpp', '.hpp'}
+EXTENSIONS = {'.hpp'}
 OUTPUT_FILE = 'cpp.json'
 
 

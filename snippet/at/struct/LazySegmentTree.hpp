@@ -1,7 +1,7 @@
 #pragma region LazySegmentTree
 // https://ei1333.github.io/algorithm/segment-tree.html
 template< typename Monoid, typename OperatorMonoid = Monoid >
-struct LazySegmentTree {
+struct LST {
     using F = function< Monoid(Monoid, Monoid) >;
     using G = function< Monoid(Monoid, OperatorMonoid) >;
     using H = function< OperatorMonoid(OperatorMonoid, OperatorMonoid) >;
@@ -15,7 +15,7 @@ struct LazySegmentTree {
     const P p;
     const Monoid M1;
     const OperatorMonoid OM0;
-    LazySegmentTree(int n, const F op, const G mapping, const H composition, const P p,
+    LST(int n, const F op, const G mapping, const H composition, const P p,
                     const Monoid &M, const OperatorMonoid ID)
         : f(op), g(mapping), h(composition), p(p), M1(M), OM0(ID)
         {
@@ -77,7 +77,7 @@ struct LazySegmentTree {
         return query(k, k + 1);
     }
 };
-namespace lazysegtreeOpt{
+namespace LazySegtreeOpt{
     using Monoid = ll;
     using OpMonoid = ll;
     namespace secadd{
