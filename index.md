@@ -15,6 +15,9 @@ data:
       path: snippet/at/array/LIS.hpp
       title: snippet/at/array/LIS.hpp
     - icon: ':warning:'
+      path: snippet/at/array/compress1D.hpp
+      title: snippet/at/array/compress1D.hpp
+    - icon: ':warning:'
       path: snippet/at/array/cumsum.hpp
       title: snippet/at/array/cumsum.hpp
     - icon: ':warning:'
@@ -36,6 +39,12 @@ data:
       title: snippet/at/binary/bitRecount.hpp
   - name: snippet/at/graph
     pages:
+    - icon: ':heavy_check_mark:'
+      path: snippet/at/graph/BFS.hpp
+      title: snippet/at/graph/BFS.hpp
+    - icon: ':heavy_check_mark:'
+      path: snippet/at/graph/LCA.hpp
+      title: snippet/at/graph/LCA.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/SCC.hpp
       title: snippet/at/graph/SCC.hpp
@@ -70,6 +79,9 @@ data:
       path: snippet/at/graph/prim.hpp
       title: snippet/at/graph/prim.hpp
     - icon: ':warning:'
+      path: snippet/at/graph/tSort.hpp
+      title: snippet/at/graph/tSort.hpp
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/treeDiamiter.hpp
       title: snippet/at/graph/treeDiamiter.hpp
     - icon: ':heavy_check_mark:'
@@ -177,7 +189,7 @@ data:
   verificationCategories:
   - name: test/graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/graph/LCA.test.cpp
       title: test/graph/LCA.test.cpp
     - icon: ':heavy_check_mark:'
@@ -201,7 +213,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/graph/prim.test.cpp
       title: test/graph/prim.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/graph/treeDiamiter.test.cpp
       title: test/graph/treeDiamiter.test.cpp
     - icon: ':heavy_check_mark:'

@@ -1,8 +1,14 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: test/graph/tSort.cpp
+    title: test/graph/tSort.cpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/graph/LCA.test.cpp
+    title: test/graph/LCA.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/graph/SCC.test.cpp
     title: test/graph/SCC.test.cpp
@@ -21,6 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/graph/prim.test.cpp
     title: test/graph/prim.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/graph/treeDiamiter.test.cpp
+    title: test/graph/treeDiamiter.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/graph/warshallFloyd.test.cpp
     title: test/graph/warshallFloyd.test.cpp
@@ -60,13 +69,16 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: snippet/at/graph/graph.hpp
-  requiredBy: []
+  requiredBy:
+  - test/graph/tSort.cpp
   timestamp: '2021-06-18 15:56:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/graph/TravelingSalesmanProblem.test.cpp
   - test/graph/dijkstra.test.cpp
   - test/graph/bellmanFord.test.cpp
+  - test/graph/LCA.test.cpp
+  - test/graph/treeDiamiter.test.cpp
   - test/graph/prim.test.cpp
   - test/graph/SCC.test.cpp
   - test/graph/warshallFloyd.test.cpp

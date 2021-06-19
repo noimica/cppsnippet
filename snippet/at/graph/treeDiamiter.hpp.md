@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/graph/treeDiamiter.test.cpp
+    title: test/graph/treeDiamiter.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/graph/treeDiamiter.hpp\"\n//\u6728\u306E\u76F4\
@@ -24,8 +27,9 @@ data:
   path: snippet/at/graph/treeDiamiter.hpp
   requiredBy: []
   timestamp: '2021-06-19 19:07:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/graph/treeDiamiter.test.cpp
 documentation_of: snippet/at/graph/treeDiamiter.hpp
 layout: document
 redirect_from:
