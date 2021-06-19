@@ -1,4 +1,5 @@
 {
+"test/graph/LCA.test.cpp": "2021-06-19 22:58:50 +0900",
 "test/graph/SCC.test.cpp": "2021-06-19 19:07:28 +0900",
 "test/graph/TravelingSalesmanProblem.test.cpp": "2021-06-19 19:07:28 +0900",
 "test/graph/bellmanFord.test.cpp": "2021-06-19 19:07:28 +0900",
@@ -6,6 +7,7 @@
 "test/graph/kruskal.test.cpp": "2021-06-18 19:34:09 +0900",
 "test/graph/max_flow.test.cpp": "2021-06-19 19:07:28 +0900",
 "test/graph/prim.test.cpp": "2021-06-18 19:34:09 +0900",
+"test/graph/treeDiamiter.test.cpp": "2021-06-19 22:58:50 +0900",
 "test/graph/warshallFloyd.test.cpp": "2021-06-18 20:23:15 +0900",
 "test/math/dpow.test.cpp": "2021-06-19 19:28:13 +0900",
 "test/math/isprime.test.cpp": "2021-06-19 19:28:13 +0900",
