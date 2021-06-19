@@ -14,27 +14,26 @@ data:
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \  File \"/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: snippet/at/graph/tSort.hpp:\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: snippet/at/graph/LCA.hpp:\
     \ line -1: no such header\n"
-  code: "// \u7B54\u3048\u304C\u8907\u6570\u3042\u308B\u304C\u3001\u30ED\u30FC\u30AB\
-    \u30EB\u30B8\u30E3\u30C3\u30B8\u304C\u5BFE\u5FDC\u3057\u3066\u3044\u306A\u3044\
-    \u306E\u3067NG\r\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C\"\
     \r\n\r\n#include \"./snippet/at/header/header.hpp\"\r\n#include \"./snippet/at/graph/graph.hpp\"\
-    \r\n#include \"./snippet/at/graph/tSort.hpp\"\r\n\r\nint main(){\r\n    I(ll,\
-    \ V, E);\r\n    graph g(V);\r\n    REP(i, E){\r\n        I(ll, s, t);\r\n    \
-    \    g.add_diedge(s, t);\r\n    }\r\n\r\n    auto vs = tSort(g);\r\n    REP(i,\
-    \ V){\r\n        cout << vs[i] << el;\r\n    }\r\n    return 0;\r\n}"
+    \r\n#include \"./snippet/at/graph/LCA.hpp\"\r\n\r\nint main(){\r\n    I(ll, N);\r\
+    \n    graph g(N);\r\n    REP(i, N){\r\n        I(ll, k);\r\n        REP(j, k){\r\
+    \n            I(ll, c);\r\n            g.add_edge(i, c);\r\n        }\r\n    }\r\
+    \n    LCA lca(g);\r\n    I(ll, Q);\r\n    REP(i, Q){\r\n        I(ll, u, v);\r\
+    \n        cout << lca.query(u, v) << el;\r\n    }\r\n    return 0;\r\n}"
   dependsOn: []
   isVerificationFile: true
-  path: test/graph/Tsort.test.cpp
+  path: test/graph/LCA.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: test/graph/Tsort.test.cpp
+documentation_of: test/graph/LCA.test.cpp
 layout: document
 redirect_from:
-- /verify/test/graph/Tsort.test.cpp
-- /verify/test/graph/Tsort.test.cpp.html
-title: test/graph/Tsort.test.cpp
+- /verify/test/graph/LCA.test.cpp
+- /verify/test/graph/LCA.test.cpp.html
+title: test/graph/LCA.test.cpp
 ---

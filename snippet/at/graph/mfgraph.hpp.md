@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/graph/max_flow.test.cpp
+    title: test/graph/max_flow.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/graph/mfgraph.hpp\"\n#pragma region mfgraph\r\
@@ -84,8 +87,9 @@ data:
   path: snippet/at/graph/mfgraph.hpp
   requiredBy: []
   timestamp: '2021-06-18 15:56:11+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/graph/max_flow.test.cpp
 documentation_of: snippet/at/graph/mfgraph.hpp
 layout: document
 redirect_from:

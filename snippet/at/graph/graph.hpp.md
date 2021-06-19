@@ -4,6 +4,15 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/graph/SCC.test.cpp
+    title: test/graph/SCC.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/graph/TravelingSalesmanProblem.test.cpp
+    title: test/graph/TravelingSalesmanProblem.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/graph/bellmanFord.test.cpp
+    title: test/graph/bellmanFord.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/graph/dijkstra.test.cpp
     title: test/graph/dijkstra.test.cpp
   - icon: ':heavy_check_mark:'
@@ -55,8 +64,11 @@ data:
   timestamp: '2021-06-18 15:56:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/graph/TravelingSalesmanProblem.test.cpp
   - test/graph/dijkstra.test.cpp
+  - test/graph/bellmanFord.test.cpp
   - test/graph/prim.test.cpp
+  - test/graph/SCC.test.cpp
   - test/graph/warshallFloyd.test.cpp
   - test/graph/kruskal.test.cpp
 documentation_of: snippet/at/graph/graph.hpp

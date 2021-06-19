@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/graph/bellmanFord.test.cpp
+    title: test/graph/bellmanFord.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/graph/bellmanFord.hpp\"\n#pragma region bellmanFord\r\
@@ -42,8 +45,9 @@ data:
   path: snippet/at/graph/bellmanFord.hpp
   requiredBy: []
   timestamp: '2021-06-18 20:18:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/graph/bellmanFord.test.cpp
 documentation_of: snippet/at/graph/bellmanFord.hpp
 layout: document
 redirect_from:

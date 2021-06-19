@@ -2,10 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/math/dpow.test.cpp
+    title: test/math/dpow.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/math/isprime.test.cpp
+    title: test/math/isprime.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/math/dpow.hpp\"\nll dpow(ll x, ll n, int mod\
@@ -20,8 +26,10 @@ data:
   path: snippet/at/math/dpow.hpp
   requiredBy: []
   timestamp: '2021-06-18 20:18:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/math/dpow.test.cpp
+  - test/math/isprime.test.cpp
 documentation_of: snippet/at/math/dpow.hpp
 layout: document
 redirect_from:

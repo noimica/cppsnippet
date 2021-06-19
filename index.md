@@ -36,16 +36,16 @@ data:
       title: snippet/at/binary/bitRecount.hpp
   - name: snippet/at/graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/SCC.hpp
       title: snippet/at/graph/SCC.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/TSP.hpp
       title: snippet/at/graph/TSP.hpp
     - icon: ':warning:'
       path: snippet/at/graph/Tsort.hpp
       title: snippet/at/graph/Tsort.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/bellmanFord.hpp
       title: snippet/at/graph/bellmanFord.hpp
     - icon: ':warning:'
@@ -63,7 +63,7 @@ data:
     - icon: ':warning:'
       path: snippet/at/graph/lca.hpp
       title: snippet/at/graph/lca.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/graph/mfgraph.hpp
       title: snippet/at/graph/mfgraph.hpp
     - icon: ':heavy_check_mark:'
@@ -97,7 +97,7 @@ data:
     - icon: ':warning:'
       path: snippet/at/math/combn.hpp
       title: snippet/at/math/combn.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/math/dpow.hpp
       title: snippet/at/math/dpow.hpp
     - icon: ':warning:'
@@ -108,13 +108,13 @@ data:
       title: snippet/at/math/fact.hpp
   - name: snippet/at/math/prime
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/math/prime/isprime.hpp
       title: snippet/at/math/prime/isprime.hpp
     - icon: ':warning:'
       path: snippet/at/math/prime/osa_k.hpp
       title: snippet/at/math/prime/osa_k.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/math/prime/primeFactorize.hpp
       title: snippet/at/math/prime/primeFactorize.hpp
   - name: snippet/at/struct
@@ -126,7 +126,7 @@ data:
       path: snippet/at/struct/UnionFind.hpp
       title: "\u30C7\u30FC\u30BFx\u306E\u5C5E\u3059\u308B\u6728\u306E\u6839\u3092\u53D6\
         \u5F97(\u7D4C\u8DEF\u5727\u7E2E\u3082\u884C\u3046)"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: snippet/at/struct/modint.hpp
       title: snippet/at/struct/modint.hpp
   - name: snippet/normal/LOOP
@@ -169,12 +169,26 @@ data:
     - icon: ':warning:'
       path: snippet/normal/unique.hpp
       title: snippet/normal/unique.hpp
+  - name: test/graph
+    pages:
+    - icon: ':warning:'
+      path: test/graph/tSort.cpp
+      title: test/graph/tSort.cpp
   verificationCategories:
   - name: test/graph
     pages:
     - icon: ':x:'
-      path: test/graph/Tsort.test.cpp
-      title: test/graph/Tsort.test.cpp
+      path: test/graph/LCA.test.cpp
+      title: test/graph/LCA.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/graph/SCC.test.cpp
+      title: test/graph/SCC.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/graph/TravelingSalesmanProblem.test.cpp
+      title: test/graph/TravelingSalesmanProblem.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/graph/bellmanFord.test.cpp
+      title: test/graph/bellmanFord.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/graph/dijkstra.test.cpp
       title: test/graph/dijkstra.test.cpp
@@ -182,11 +196,28 @@ data:
       path: test/graph/kruskal.test.cpp
       title: test/graph/kruskal.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/graph/max_flow.test.cpp
+      title: test/graph/max_flow.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/graph/prim.test.cpp
       title: test/graph/prim.test.cpp
+    - icon: ':x:'
+      path: test/graph/treeDiamiter.test.cpp
+      title: test/graph/treeDiamiter.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/graph/warshallFloyd.test.cpp
       title: test/graph/warshallFloyd.test.cpp
+  - name: test/math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/math/dpow.test.cpp
+      title: test/math/dpow.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/math/isprime.test.cpp
+      title: test/math/isprime.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/math/primeFactorize.test.cpp
+      title: test/math/primeFactorize.test.cpp
   - name: test/struct/LazySegmentTree
     pages:
     - icon: ':heavy_check_mark:'
@@ -206,5 +237,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/struct/UnionFind.test.cpp
       title: test/struct/UnionFind.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/struct/modint_pow.test.cpp
+      title: test/struct/modint_pow.test.cpp
 layout: toppage
 ---

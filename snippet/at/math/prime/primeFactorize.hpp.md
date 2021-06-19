@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/math/primeFactorize.test.cpp
+    title: test/math/primeFactorize.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"snippet/at/math/prime/primeFactorize.hpp\"\n// \u7D20\u56E0\
@@ -31,8 +34,9 @@ data:
   path: snippet/at/math/prime/primeFactorize.hpp
   requiredBy: []
   timestamp: '2021-06-18 15:56:11+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/math/primeFactorize.test.cpp
 documentation_of: snippet/at/math/prime/primeFactorize.hpp
 layout: document
 redirect_from:
