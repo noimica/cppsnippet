@@ -22,7 +22,7 @@ bool suspect(uint a, ull t, ull n){
     }
     return (t & 1) || x == n1;
 }
-bool isprime_(ull n){
+bool isprime(ull n){
     if(n == 2) return true;
     if(n < 2 || (n & 1) == 0) return false;
     ull d = (n - 1) >> 1;
