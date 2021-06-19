@@ -10,8 +10,9 @@ umap<ll, ll> BFS(const graph& g, ll s, ll limit = INF){
         auto [c, v] = que.front(); que.pop();
         if(d[v]<c) continue;
         for(auto e : g.G[v]){
-            if(d[e.to]>d[v]+1 && limit>=d[v]+1){
-                d[e.to] = d[v]+1;
+            ll l = d[v]+e.cost;
+            if(d[e.to]>l && limit>=l){
+                d[e.to] = l;
                 que.push({d[e.to],e.to});
                 ret[e.to] = d[e.to];
             }

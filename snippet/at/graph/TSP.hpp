@@ -10,24 +10,21 @@ struct TSP{
         }
     }
     ll calc(){return calc(0);}
-    ll calc(int v){
-        // 戻らない場合、sを((1ll<<V)-1ll)&~(1ll<<v)に
-        return calc(v, 0);
-    }
+    ll calc(int v){return calc(v, 0);}
     ll calc(int v, int s){
         // dp[bit][開始頂点∈bit]
         if(dp[s][v] >= 0){
             return dp[s][v];
         }
 
-        if(s == 0){
+        if(s == (1<<V)-1 && v == 0){
             return dp[s][v] = 0;
         }
 
         ll ans = INF;
         REP(u, V){
-            if(s&(1ll<<u)){
-                ans = min(ans, calc(u, s&~(1<<u)) + dist[v][u]);
+            if(!(s&1ll<<u)){
+                ans = min(ans, calc(u, s|(1<<u)) + dist[v][u]);
             }
         }
 
