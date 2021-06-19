@@ -51,15 +51,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/TSP.hpp
       title: snippet/at/graph/TSP.hpp
-    - icon: ':warning:'
-      path: snippet/at/graph/Tsort.hpp
-      title: snippet/at/graph/Tsort.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/bellmanFord.hpp
       title: snippet/at/graph/bellmanFord.hpp
-    - icon: ':warning:'
-      path: snippet/at/graph/bfs.hpp
-      title: snippet/at/graph/bfs.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/dijkstra.hpp
       title: snippet/at/graph/dijkstra.hpp
@@ -69,18 +63,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/kruskal.hpp
       title: snippet/at/graph/kruskal.hpp
-    - icon: ':warning:'
-      path: snippet/at/graph/lca.hpp
-      title: snippet/at/graph/lca.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/mfgraph.hpp
       title: snippet/at/graph/mfgraph.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/prim.hpp
       title: snippet/at/graph/prim.hpp
-    - icon: ':warning:'
-      path: snippet/at/graph/tSort.hpp
-      title: snippet/at/graph/tSort.hpp
     - icon: ':heavy_check_mark:'
       path: snippet/at/graph/treeDiamiter.hpp
       title: snippet/at/graph/treeDiamiter.hpp

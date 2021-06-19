@@ -1,10 +1,7 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test/graph/tSort.cpp
-    title: test/graph/tSort.cpp
+  _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/graph/LCA.test.cpp
@@ -69,8 +66,7 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: snippet/at/graph/graph.hpp
-  requiredBy:
-  - test/graph/tSort.cpp
+  requiredBy: []
   timestamp: '2021-06-18 15:56:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

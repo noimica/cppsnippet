@@ -61,10 +61,10 @@ data:
     \ [height, width](ll y, ll x){\r\n            return \r\n                (y <\
     \ 0 || y >= height || x < 0 || x >= width)\r\n                ? -1\r\n       \
     \         : y*width + x;\r\n        };\r\n    }\r\n};\r\n#pragma endregion\n#line\
-    \ 1 \"snippet/at/graph/BFS.hpp\"\n// O(V+E)\r\numap<ll, ll> BFS(const graph& g,\
-    \ ll s, ll limit = INF){\r\n    vector<ll> d(g.V, INF);\r\n    umap<ll, ll> ret;\r\
-    \n    d[s] = 0;\r\n    queue<P> que;\r\n    que.push({0, s});\r\n    ret[s] =\
-    \ 0;\r\n    while(!que.empty()){\r\n        auto [c, v] = que.front(); que.pop();\r\
+    \ 1 \"snippet/at/graph/BFS.hpp\"\n// O(V+E)\r\n\r\numap<ll, ll> BFS(const graph&\
+    \ g, ll s, ll limit = INF){\r\n    vector<ll> d(g.V, INF);\r\n    umap<ll, ll>\
+    \ ret;\r\n    d[s] = 0;\r\n    queue<P> que;\r\n    que.push({0, s});\r\n    ret[s]\
+    \ = 0;\r\n    while(!que.empty()){\r\n        auto [c, v] = que.front(); que.pop();\r\
     \n        if(d[v]<c) continue;\r\n        for(auto e : g.G[v]){\r\n          \
     \  ll l = d[v]+e.cost;\r\n            if(d[e.to]>l && limit>=l){\r\n         \
     \       d[e.to] = l;\r\n                que.push({d[e.to],e.to});\r\n        \
@@ -92,7 +92,7 @@ data:
   isVerificationFile: true
   path: test/graph/treeDiamiter.test.cpp
   requiredBy: []
-  timestamp: '2021-06-19 22:58:50+09:00'
+  timestamp: '2021-06-19 23:22:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/graph/treeDiamiter.test.cpp

@@ -58,38 +58,39 @@ data:
     \ [height, width](ll y, ll x){\r\n            return \r\n                (y <\
     \ 0 || y >= height || x < 0 || x >= width)\r\n                ? -1\r\n       \
     \         : y*width + x;\r\n        };\r\n    }\r\n};\r\n#pragma endregion\n#line\
-    \ 1 \"snippet/at/graph/LCA.hpp\"\n// \u6700\u5C0F\u5171\u901A\u7956\u5148\r\n\
-    // \u524D\u51E6\u7406 O(NlogN), \u30AF\u30A8\u30EA O(logN)\r\nstruct LCA {\r\n\
-    \    vector<vector<int>> parent;  // parent[k][u]:= u \u306E 2^k \u5148\u306E\u89AA\
-    \r\n    vector<int> dist;            // root \u304B\u3089\u306E\u8DDD\u96E2\r\n\
-    \    LCA(const graph &g, int root = 0) { init(g, root); }\r\n    // \u521D\u671F\
-    \u5316\r\n    void init(const graph &g, int root = 0) {\r\n        ll V = g.V;\r\
-    \n        ll K = __builtin_popcountll(LONG_LONG_MAX) - __builtin_clzll(V) + 1;\r\
-    \n        parent.assign(K, vector<int>(V, -1));\r\n        dist.assign(V, -1);\r\
-    \n        dfs(g, root, -1, 0);\r\n        for (int k = 0; k + 1 < K; k++) {\r\n\
-    \            for (int v = 0; v < V; v++) {\r\n                if (parent[k][v]\
-    \ < 0) {\r\n                    parent[k + 1][v] = -1;\r\n                } else\
-    \ {\r\n                    parent[k + 1][v] = parent[k][parent[k][v]];\r\n   \
-    \             }\r\n            }\r\n        }\r\n    }\r\n    // \u6839\u304B\u3089\
-    \u306E\u8DDD\u96E2\u30681\u3064\u5148\u306E\u9802\u70B9\u3092\u6C42\u3081\u308B\
-    \r\n    void dfs(const graph &g, int v, int p, int d) {\r\n        parent[0][v]\
-    \ = p;\r\n        dist[v] = d;\r\n        for (auto e : g.G[v]) {\r\n        \
-    \    if (e.to != p) dfs(g, e.to, v, d + 1);\r\n        }\r\n    }\r\n    int query(int\
-    \ u, int v) {\r\n        if (dist[u] < dist[v]) swap(u, v);  // u \u306E\u65B9\
-    \u304C\u6DF1\u3044\u3068\u3059\u308B\r\n        int K = parent.size();\r\n   \
-    \     // LCA \u307E\u3067\u306E\u8DDD\u96E2\u3092\u540C\u3058\u306B\u3059\u308B\
-    \r\n        for (int k = 0; k < K; k++) {\r\n            if ((dist[u] - dist[v])\
-    \ >> k & 1) {\r\n                u = parent[k][u];\r\n            }\r\n      \
-    \  }\r\n        // \u4E8C\u5206\u63A2\u7D22\u3067 LCA \u3092\u6C42\u3081\u308B\
-    \r\n        if (u == v) return u;\r\n        for (int k = K - 1; k >= 0; k--)\
-    \ {\r\n            if (parent[k][u] != parent[k][v]) {\r\n                u =\
-    \ parent[k][u];\r\n                v = parent[k][v];\r\n            }\r\n    \
-    \    }\r\n        return parent[0][u];\r\n    }\r\n};\n#line 6 \"test/graph/LCA.test.cpp\"\
-    \n\r\nint main(){\r\n    I(ll, N);\r\n    graph g(N);\r\n    REP(i, N){\r\n  \
-    \      I(ll, k);\r\n        REP(j, k){\r\n            I(ll, c);\r\n          \
-    \  g.add_edge(i, c);\r\n        }\r\n    }\r\n    LCA lca(g);\r\n    I(ll, Q);\r\
-    \n    REP(i, Q){\r\n        I(ll, u, v);\r\n        cout << lca.query(u, v) <<\
-    \ el;\r\n    }\r\n    return 0;\r\n}\n"
+    \ 1 \"snippet/at/graph/LCA.hpp\"\n// \u6700\u5C0F\u5171\u901A\u7956\u5148\r\n\r\
+    \n// \u524D\u51E6\u7406 O(NlogN), \u30AF\u30A8\u30EA O(logN)\r\n\r\nstruct LCA\
+    \ {\r\n    vector<vector<int>> parent;  // parent[k][u]:= u \u306E 2^k \u5148\u306E\
+    \u89AA\r\n\r\n    vector<int> dist;            // root \u304B\u3089\u306E\u8DDD\
+    \u96E2\r\n\r\n    LCA(const graph &g, int root = 0) { init(g, root); }\r\n   \
+    \ // \u521D\u671F\u5316\r\n\r\n    void init(const graph &g, int root = 0) {\r\
+    \n        ll V = g.V;\r\n        ll K = __builtin_popcountll(LONG_LONG_MAX) -\
+    \ __builtin_clzll(V) + 1;\r\n        parent.assign(K, vector<int>(V, -1));\r\n\
+    \        dist.assign(V, -1);\r\n        dfs(g, root, -1, 0);\r\n        for (int\
+    \ k = 0; k + 1 < K; k++) {\r\n            for (int v = 0; v < V; v++) {\r\n  \
+    \              if (parent[k][v] < 0) {\r\n                    parent[k + 1][v]\
+    \ = -1;\r\n                } else {\r\n                    parent[k + 1][v] =\
+    \ parent[k][parent[k][v]];\r\n                }\r\n            }\r\n        }\r\
+    \n    }\r\n    // \u6839\u304B\u3089\u306E\u8DDD\u96E2\u30681\u3064\u5148\u306E\
+    \u9802\u70B9\u3092\u6C42\u3081\u308B\r\n\r\n    void dfs(const graph &g, int v,\
+    \ int p, int d) {\r\n        parent[0][v] = p;\r\n        dist[v] = d;\r\n   \
+    \     for (auto e : g.G[v]) {\r\n            if (e.to != p) dfs(g, e.to, v, d\
+    \ + 1);\r\n        }\r\n    }\r\n    int query(int u, int v) {\r\n        if (dist[u]\
+    \ < dist[v]) swap(u, v);  // u \u306E\u65B9\u304C\u6DF1\u3044\u3068\u3059\u308B\
+    \r\n\r\n        int K = parent.size();\r\n        // LCA \u307E\u3067\u306E\u8DDD\
+    \u96E2\u3092\u540C\u3058\u306B\u3059\u308B\r\n\r\n        for (int k = 0; k <\
+    \ K; k++) {\r\n            if ((dist[u] - dist[v]) >> k & 1) {\r\n           \
+    \     u = parent[k][u];\r\n            }\r\n        }\r\n        // \u4E8C\u5206\
+    \u63A2\u7D22\u3067 LCA \u3092\u6C42\u3081\u308B\r\n\r\n        if (u == v) return\
+    \ u;\r\n        for (int k = K - 1; k >= 0; k--) {\r\n            if (parent[k][u]\
+    \ != parent[k][v]) {\r\n                u = parent[k][u];\r\n                v\
+    \ = parent[k][v];\r\n            }\r\n        }\r\n        return parent[0][u];\r\
+    \n    }\r\n};\n#line 6 \"test/graph/LCA.test.cpp\"\n\r\nint main(){\r\n    I(ll,\
+    \ N);\r\n    graph g(N);\r\n    REP(i, N){\r\n        I(ll, k);\r\n        REP(j,\
+    \ k){\r\n            I(ll, c);\r\n            g.add_edge(i, c);\r\n        }\r\
+    \n    }\r\n    LCA lca(g);\r\n    I(ll, Q);\r\n    REP(i, Q){\r\n        I(ll,\
+    \ u, v);\r\n        cout << lca.query(u, v) << el;\r\n    }\r\n    return 0;\r\
+    \n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C\"\
     \r\n\r\n#include \"./snippet/at/header/header.hpp\"\r\n#include \"./snippet/at/graph/graph.hpp\"\
     \r\n#include \"./snippet/at/graph/LCA.hpp\"\r\n\r\nint main(){\r\n    I(ll, N);\r\
@@ -104,7 +105,7 @@ data:
   isVerificationFile: true
   path: test/graph/LCA.test.cpp
   requiredBy: []
-  timestamp: '2021-06-19 22:58:50+09:00'
+  timestamp: '2021-06-19 23:22:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/graph/LCA.test.cpp
