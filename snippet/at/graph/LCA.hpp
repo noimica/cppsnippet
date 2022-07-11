@@ -1,5 +1,4 @@
 // 最小共通祖先
-
 // 前処理 O(NlogN), クエリ O(logN)
 
 struct LCA {
@@ -8,8 +7,8 @@ struct LCA {
     vector<int> dist;            // root からの距離
 
     LCA(const graph &g, int root = 0) { init(g, root); }
+    
     // 初期化
-
     void init(const graph &g, int root = 0) {
         ll V = g.V;
         ll K = __builtin_popcountll(LONG_LONG_MAX) - __builtin_clzll(V) + 1;
@@ -27,7 +26,6 @@ struct LCA {
         }
     }
     // 根からの距離と1つ先の頂点を求める
-
     void dfs(const graph &g, int v, int p, int d) {
         parent[0][v] = p;
         dist[v] = d;
@@ -40,14 +38,12 @@ struct LCA {
 
         int K = parent.size();
         // LCA までの距離を同じにする
-
         for (int k = 0; k < K; k++) {
             if ((dist[u] - dist[v]) >> k & 1) {
                 u = parent[k][u];
             }
         }
         // 二分探索で LCA を求める
-
         if (u == v) return u;
         for (int k = K - 1; k >= 0; k--) {
             if (parent[k][u] != parent[k][v]) {
@@ -57,4 +53,6 @@ struct LCA {
         }
         return parent[0][u];
     }
+    // 頂点間の距離
+    int get_dist(int u, int v) { return dist[u] + dist[v] - 2 * dist[query(u, v)]; }
 };
